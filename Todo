@@ -1,0 +1,614 @@
+- chrome
+- webstorm
+- git
+- nodejs
+- gcloud
+-mongoDB
+-mongoBooster
+
+-----learning
+- JavaScript
+- NodeJS
+-mongoDB
+- swagger
+- git
+
+```
+Date:24January 2019
+Work Time:8 hours
+Upwork Time: 4.5 hours
+
+work done:
+- working on understanding the flow of A24Group
+- Setup few projects on local
+```
+
+
+------question to solve---------
+As a user I want to track the Student details which could include 
+- Student details like name, address, father name, mother name, age, sex, DOB and a note that will describe about the remarks of the student by each teacher
+- student in/out time
+- marks obtained by the students in first, second and third term. You can consider subjects like english, math and science
+- As teacher is mentioned above we need to track the detail of the teacher. You can decide on what attributes you can use to describe the teacher.
+- As a user, I need to be able to get all the records for student, teachers, percentage of each student for each term, average in/out time for each student.
+{
+	"student_id":"5c3dba6712822513f53748d9",
+	"term_no":"1",
+	"subject":[{
+            	"subject_name": "english",
+            	"marks_obtained": 50
+            },
+            {
+            	"subject_name": "maths",
+            	"marks_obtained": 60	
+            },
+            {
+            	"subject_name": "science",
+            	"marks_obtained": 70
+            }]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	"student_id":1,
+        "first_name":"John",
+        "last_name":"Roy",
+        "address":"vesu,surat,gujarat,395007",
+        "father_name":"William",
+        "mother_name":"Mary",
+        "age":20,
+        "gender":"male",
+        "dob":"02-03-1998",
+        "remark":[{101,"Not Attentive in class"},{102,"Very talkative"}],
+        "in_time":"07:00:00 am"
+        "out_time":"01:00:00 pm",
+        "term":[{english,1,50},{maths,1,70},{sci,1,80},{english,2,60},{maths,2,80},{sci,2,80},{english,3,50},{maths,3,70},{sci,3,80},]
+
+-----email
+E-MAIL: vocehula@2mailnext.com
+USERNAME : megha2019
+PASSWORD: megha2018
+
+
+
+
+
+<html>
+<head></head>
+<body>
+
+<script>
+var data=[
+  {
+    id:1,
+    type:"Bmw"
+  },
+  {
+    id:2,
+    type:"Audi"
+  },
+  {
+    id:3,
+    type:"Bmw"
+  },
+  {
+    id:4,
+    type:"mercedes"
+  },
+  {
+    id:5,
+    type:"ferrari"
+  },{
+    id:6,
+    type:"audi"
+  },
+  {
+    id:7,
+    type:"audi"
+  },
+  {
+    id:8,
+    type:"ferrari"
+  }
+]
+
+
+uniqueArray = data.filter(function(item, pos) {
+    return data.indexOf(item) == pos;
+})
+
+
+document.write(JSON.stringify(uniqueArray));
+/*
+var finalResult=[];
+
+
+data.forEach((list_of_cars)=>{
+
+document.write(JSON.stringify(list_of_cars));
+document.write('<br>');
+
+
+var response={};
+
+
+
+
+if(list_of_cars['type']
+
+var objName=list_of_cars['type'];
+var objVal=list_of_cars['id'];
+
+response['type']=objName,
+response['ids']=objVal;
+
+
+finalResult.push(response);
+
+});
+document.write('<br>');
+
+document.write(JSON.stringify(finalResult));*/
+</script>
+</body>
+</html>
+
+
+
+
+        var i=0;
+        tot_marks_termwise[i]=0;
+        var finalMarksObject ={};
+        studentList.forEach((studentData) => {
+
+            tot_marks_termwise[i]=0;
+            finalMarksObject['term_no_' + studentData['term_no']] = {};
+
+            studentData.subject.forEach((sub) => {
+                var objName = sub.subject_name;
+                var objValue = sub.marks_obtained;
+                tot_marks_termwise[i] = tot_marks_termwise[i] + objValue;
+                finalMarksObject['term_no_' + studentData['term_no']][objName] = objValue;
+            });
+            finalMarksObject['term_no_' + studentData['term_no']]['Total_marks_for_term'+ studentData['term_no']] = tot_marks_termwise[i];
+            i++;
+
+
+        });
+        res.end(JSON.stringify([finalMarksObject,tot_marks_termwise]));
+
+
+
+
+
+
+
+
+
+<html>
+<head></head>
+<body>
+
+<script>
+var data=[
+  {
+    id:1,
+    type:"Bmw"
+  },
+  {
+    id:2,
+    type:"Audi"
+  },
+  {
+    id:3,
+    type:"Bmw"
+  },
+  {
+    id:4,
+    type:"mercedes"
+  },
+  {
+    id:5,
+    type:"ferrari"
+  },{
+    id:6,
+    type:"audi"
+  },
+  {
+    id:7,
+    type:"audi"
+  },
+  {
+    id:8,
+    type:"ferrari"
+  }
+]
+
+
+uniqueArray = data.filter(function(item, pos) {
+    return data.indexOf(item) == pos;
+})
+
+
+document.write(JSON.stringify(uniqueArray));
+/*
+var finalResult=[];
+
+
+data.forEach((list_of_cars)=>{
+
+document.write(JSON.stringify(list_of_cars));
+document.write('<br>');
+
+
+var response={};
+
+
+
+
+if(list_of_cars['type']
+
+var objName=list_of_cars['type'];
+var objVal=list_of_cars['id'];
+
+response['type']=objName,
+response['ids']=objVal;
+
+
+finalResult.push(response);
+
+});
+document.write('<br>');
+
+document.write(JSON.stringify(finalResult));*/
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head></head>
+<body>
+
+<script>
+var data=[
+  {
+    id:1,
+    type:"Bmw"
+  },
+  {
+    id:2,
+    type:"Audi"
+  },
+  {
+    id:3,
+    type:"Bmw"
+  },
+  {
+    id:4,
+    type:"mercedes"
+  },
+  {
+    id:5,
+    type:"ferrari"
+  },{
+    id:6,
+    type:"audi"
+  },
+  {
+    id:7,
+    type:"audi"
+  },
+  {
+    id:8,
+    type:"ferrari"
+  }
+]
+
+
+uniqueArray = data.filter(function(item, pos) {
+    return data.indexOf(item) == pos;
+})
+
+
+document.write(JSON.stringify(uniqueArray));
+/*
+var finalResult=[];
+
+
+data.forEach((list_of_cars)=>{
+
+document.write(JSON.stringify(list_of_cars));
+document.write('<br>');
+
+
+var response={};
+
+
+
+
+if(list_of_cars['type']https://github.com/megha2019/demo-respository/pull/2
+
+var objName=list_of_cars['type'];
+var objVal=list_of_cars['id'];
+
+response['type']=objName,
+response['ids']=objVal;
+
+
+finalResult.push(response);
+
+});
+document.write('<br>');
+
+document.write(JSON.stringify(finalResult));*/
+</script>
+</body>
+</html>
+
+
+
+
+
+///solution 1//////////////
+
+<html>
+<head></head>
+<body>
+
+<script>
+var data=[
+  {
+    id:1,
+    type:"Bmw"
+  },
+  {
+    id:2,
+    type:"audi"
+  },
+  {
+    id:3,
+    type:"Bmw"
+  },
+  {
+    id:4,
+    type:"mercedes"
+  },
+  {
+    id:5,
+    type:"ferrari"
+  },{
+    id:6,
+    type:"audi"
+  },
+  {
+    id:7,
+    type:"audi"
+  },
+  {
+    id:8,
+    type:"ferrari"
+  }
+]
+
+
+
+
+
+var finalResult=[];
+
+for(var i=0;i<data.length;i++)
+{
+   var response={};
+    var id_array=[];
+	var objName=data[i].type;
+    response['type']=objName;
+     var k=0;
+    for(var j=0;j<data.length;j++)
+     {
+          var found = finalResult.some(function (el) {
+                  return el.type === objName;
+         });
+      
+          if(found) {
+            k++;
+            break;
+               
+           }
+          if(data[j].type==objName)
+          {
+              id_array.push(data[j].id);
+          }
+     }
+     if(k===0){
+          response['ids']=id_array;
+          finalResult.push(response);       
+      }
+}
+
+document.write(JSON.stringify(finalResult));
+
+</script>
+</body>
+</html>
+
+
+//////////solution 2/////////////////
+
+<html>
+<head></head>
+<body>
+
+<script>
+ var data=[
+  {
+    id:1,
+    type:"Bmw"
+  },
+  {
+    id:2,
+    type:"  audi  "
+  },
+  {
+    id:3,
+    type:"Bmw"
+  },
+  {
+    id:4,
+    type:"mErcedes"
+  },
+  {
+    id:5,
+    type:"feRrari"
+  },{
+    id:6,
+    type:"audi"
+  },
+  {
+    id:'7',
+    type:"audi"
+  },
+  {
+    id:8,
+    type:"ferrari"
+  }
+];
+var finalRes = [];
+for(var i=0; i<data.length; i++){
+	var existObj = finalRes.find((item) => item['type'] === data[i].type.trim().toLowerCase());
+    var id=Number(data[i].id);
+	if(existObj){
+		existObj.ids.push(id);
+	} else {
+ 		finalRes.push({
+			type: data[i].type.trim().toLowerCase(),
+			ids :[id]
+		})
+	}
+}
+console.log(finalRes);
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//         for(var i=0;i<studentData.length;i++) {
+//             res.write(' <br>');
+//             var string=studentData[i].term_no + ': { <br>';
+//             res.write(JSON.stringify(string));
+//
+//                 for(var j=0;j<studentData[i].subject.length;j++){
+//
+//                     tot_marks_termwise[i] += Number(studentData[i].subject[j].marks_obtained);
+//                     var string=studentData[i].subject[j].subject_name +' : '+ studentData[i].subject[j].marks_obtained + ', <br> ';
+//                     res.write(JSON.stringify(string));
+//
+//                  console.log(tot_marks_termwise[i]);
+//
+//              }
+//             res.write("} ,");
+//         }
+//         res.write(JSON.stringify('<br> }'));
+//         for(var i=0;i<tot_marks_termwise.length;i++) {
+//             res.write(toString(tot_marks_termwise[i]));
+//         }
+// res.end(JSON.stringify('<br>'));
+
+
